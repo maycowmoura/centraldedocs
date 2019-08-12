@@ -6,17 +6,23 @@
   }
   h3 {
     font-family: Arial;
+    text-align: center;
+    line-height: 1.5em;
+  }
+  a, a:visited {
+   color: blue; 
   }
 </style>
 
 <h3>
-  Você será redirecionado para <a href="/mp">centraldedocs.tk/mp</a> em 5 segundos.<br>
+  Você será redirecionado para <a href="/mp">centraldedocs.tk/mp</a> em <span id="counter">5</span> segundos.<br>
   Na próxima vez use este link para acessar o formulário.
 </h3>
 <script>
 let counter = 5;
 setInterval(() => {
   counter--;
+  document.querySelector('#counter').innerHTML = counter;
   if(counter <= 0) {
     window.location.href = '/mp'
   }
