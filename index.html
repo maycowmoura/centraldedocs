@@ -1,7 +1,24 @@
+<style>
+  body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  h3 {
+    font-family: Arial;
+  }
+</style>
+
 <h3>
   Você será redirecionado para <a href="/mp">centraldedocs.tk/mp</a> em 5 segundos.<br>
   Na próxima vez use este link para acessar o formulário.
 </h3>
 <script>
-setTimeout(() => window.location.href = '/mp', 5000);
+let counter = 5;
+setInterval(() => {
+  counter--;
+  if(counter <= 0) {
+    window.location.href = '/mp'
+  }
+}, 1000);
 </script>
