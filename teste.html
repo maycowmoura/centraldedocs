@@ -57,7 +57,7 @@
     
     
 <script>
-    fetch('https://maycowmoura.000webhostapp.com/form/').then(t => text())
+    fetch('https://maycowmoura.000webhostapp.com/form/').then(t => t.text())
     .then(html => {
         html = html.replace(/<\/*html[^>]*>/g, ''); // remove html tag
         // replace all local url to web url
