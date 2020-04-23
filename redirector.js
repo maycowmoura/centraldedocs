@@ -4,5 +4,5 @@ if (window.sessionStorage.path) {
 } else {
   let path = window.location.pathname;
   window.sessionStorage.path = path;
-  window.location.href = '/';
+  window.location.href = '/teste.html';
 }
