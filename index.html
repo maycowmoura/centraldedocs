@@ -28,10 +28,12 @@
       from {
         transform: rotate(0deg);
       }
+
       to {
         transform: rotate(360deg);
       }
     }
+
     #loading {
       position: absolute;
       top: 0;
@@ -48,7 +50,6 @@
     #loading svg {
       animation: spin linear 1s infinite;
     }
-    
   </style>
 </head>
 
@@ -67,6 +68,12 @@
     let ifr = document.querySelector('iframe');
     ifr.src = baseurl + window.location.pathname;
     ifr.onload = () => document.querySelector('#loading').remove();
+
+    window.addEventListener('message', function(e){
+      if(e.data == 'go home'){
+        window.history.pushState(null, null, '/');
+      }
+    })
   </script>
 </body>
 
